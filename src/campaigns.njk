@@ -1,0 +1,68 @@
+---
+pagination:
+  data: collections.campaigns
+  size: 1
+  alias: campaign
+permalink: "campaigns/{{ campaign.data.slug }}/"
+layout: base.njk
+---
+
+{% set dispatches = collections.dispatches | dispatchesForCampaign(campaign.data.slug) %}
+{% set count = dispatches.length %}
+
+<main class="reader" data-campaign-slug="{{ campaign.data.slug }}">
+  <nav class="reader__topbar" aria-label="Campaign reader">
+    <a class="reader__home" href="/">← The Shelf</a>
+    <span class="reader__campaign">{{ campaign.data.title }}</span>
+  </nav>
+
+  <h1 class="reader__title" id="reader-heading">{{ campaign.data.title }}</h1>
+
+  <div class="reader__stage" data-dispatch-count="{{ count }}" role="region" aria-live="polite" aria-labelledby="reader-heading">
+    <div class="reader__pages" data-js="pages">
+      {% for dispatch in dispatches %}
+        <article
+          class="dispatch-page{% if loop.first %} is-active{% endif %}"
+          data-dispatch-order="{{ dispatch.data.order }}"
+          data-dispatch-total="{{ count }}"
+          aria-hidden="{{ 'false' if loop.first else 'true' }}"
+        >
+          <div class="dispatch-page__sheet">
+            <p class="dispatch-page__dateline">{{ dispatch.data.dateline }}</p>
+            <p class="dispatch-page__place">{{ dispatch.data.place }}</p>
+            <div class="dispatch-page__letter" data-js="letter">
+              {{ dispatch.templateContent | safe }}
+            </div>
+            <div class="dispatch-page__seal" aria-hidden="true"><span>T</span></div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+    <div class="reader__controls" data-js="controls">
+      <button type="button" class="reader__button reader__button--prev" data-js="prev" aria-label="Previous dispatch">Previous</button>
+      <span class="reader__folio" data-js="folio">Dispatch 1 of {{ count }}</span>
+      <button type="button" class="reader__button reader__button--next" data-js="next" aria-label="Next dispatch">Next</button>
+      <p class="reader__hint" data-js="hint">tap the page to finish the ink…</p>
+    </div>
+  </div>
+
+  <noscript>
+    <section class="nojs-stack" aria-labelledby="nojs-heading">
+      <h2 class="nojs-stack__heading" id="nojs-heading">Dispatches for {{ campaign.data.title }}</h2>
+      {% for dispatch in dispatches %}
+        <article class="nojs-letter">
+          <p class="nojs-letter__dateline">{{ dispatch.data.dateline }}</p>
+          <p class="nojs-letter__place">{{ dispatch.data.place }}</p>
+          {{ dispatch.templateContent | safe }}
+        </article>
+      {% endfor %}
+    </section>
+  </noscript>
+
+  <script src="/js/reader.js" defer></script>
+
+  <footer class="site-footer">
+    <p>Set down faithfully · That none of it be forgotten</p>
+  </footer>
+</main>

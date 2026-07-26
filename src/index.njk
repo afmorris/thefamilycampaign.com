@@ -1,0 +1,59 @@
+---
+layout: base.njk
+---
+
+<main class="home" id="top">
+  <section class="masthead" aria-labelledby="site-title">
+    <p class="masthead__eyebrow">Office of Family Expeditions · Est. 2026</p>
+    <h1 class="masthead__title" id="site-title">The Family Campaign</h1>
+    <div class="masthead__rule" aria-hidden="true"><span></span><span></span></div>
+  </section>
+
+  <section class="intro" aria-labelledby="intro-heading">
+    <h2 class="visually-hidden" id="intro-heading">A letter to the reader</h2>
+    <div class="intro__sheet">
+      <p class="intro__dateline">Headquarters, July the 26th, 2026</p>
+      <p class="intro__salutation">Dearest reader,</p>
+      <p>Herein lies the faithful record of our family campaigns: the camps pitched, the trails marched, the hounds praised, and the provisions consumed. Each expedition is preserved in the form of a field dispatch, written as though from some bygone war against nothing more serious than mosquitoes and muddy socks.</p>
+      <p>Should these pages find you well, read them by firelight. Should they find you poorly, read them anyway. A little fresh air, even in memory, seldom does harm.</p>
+      <p class="intro__signoff">Yours in triumph, — Cpt. Tony</p>
+    </div>
+    <div class="intro__seal" aria-hidden="true"><span>T</span></div>
+  </section>
+
+  <section class="campaign-board" aria-labelledby="campaigns-heading">
+    <div class="campaign-board__rule" aria-hidden="true"><span></span></div>
+    <h2 class="campaign-board__heading" id="campaigns-heading">The Campaigns</h2>
+    <div class="campaign-board__rule" aria-hidden="true"><span></span></div>
+
+    <ul class="campaign-grid">
+      {% for campaign in collections.campaigns %}
+        {% set dispatches = collections.dispatches | dispatchesForCampaign(campaign.data.slug) %}
+        {% set count = dispatches.length %}
+        <li class="campaign-card">
+          <a class="campaign-card__link" href="/campaigns/{{ campaign.data.slug }}/">
+            <div class="campaign-card__header">
+              <p class="campaign-card__eyebrow">Campaign {{ campaign.data.number | roman }}</p>
+              <h3 class="campaign-card__title">{{ campaign.data.title }}</h3>
+            </div>
+            <div class="campaign-card__body">
+              <p class="campaign-card__meta">{{ campaign.data.location }} · {{ campaign.data.dates }}</p>
+              <p class="campaign-card__summary">{{ campaign.data.summary }}</p>
+              <div class="campaign-card__divider" aria-hidden="true"><span></span></div>
+              <p class="campaign-card__tally">{{ count }} dispatch{% if count !== 1 %}es{% endif %} · {{ campaign.data.hounds }} hound{% if campaign.data.hounds !== 1 %}s{% endif %} · {{ campaign.data.casualties }} casualties</p>
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+      <li class="campaign-card campaign-card--pending">
+        <div class="campaign-card__body">
+          <p>Campaign II has not yet been waged. The maps are being drawn.</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <footer class="site-footer">
+    <p>Set down faithfully · That none of it be forgotten</p>
+  </footer>
+</main>

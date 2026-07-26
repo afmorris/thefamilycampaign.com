@@ -1,0 +1,17 @@
+{
+  "name": "thefamilycampaign.com",
+  "version": "1.0.0",
+  "description": "Archive of family camping trips written as Civil War-era field dispatches.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

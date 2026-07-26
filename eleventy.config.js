@@ -1,0 +1,60 @@
+export default function (eleventyConfig) {
+  eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/js");
+
+  eleventyConfig.addCollection("campaigns", (collectionApi) => {
+    return collectionApi.getFilteredByGlob("src/campaigns/*.md").sort((a, b) => a.data.number - b.data.number);
+  });
+
+  eleventyConfig.addCollection("dispatches", (collectionApi) => {
+    return collectionApi
+      .getFilteredByGlob("src/dispatches/*.md")
+      .sort((a, b) => {
+        if (a.data.campaign === b.data.campaign) return a.data.order - b.data.order;
+        return 0;
+      });
+  });
+
+  eleventyConfig.addFilter("dispatchesForCampaign", (dispatches, campaignSlug) => {
+    return dispatches
+      .filter((d) => d.data.campaign === campaignSlug)
+      .sort((a, b) => a.data.order - b.data.order);
+  });
+
+  eleventyConfig.addFilter("roman", (n) => {
+    const map = {
+      M: 1000,
+      CM: 900,
+      D: 500,
+      CD: 400,
+      C: 100,
+      XC: 90,
+      L: 50,
+      XL: 40,
+      X: 10,
+      IX: 9,
+      V: 5,
+      IV: 4,
+      I: 1,
+    };
+    let num = n;
+    let roman = "";
+    for (const [letter, value] of Object.entries(map)) {
+      while (num >= value) {
+        roman += letter;
+        num -= value;
+      }
+    }
+    return roman;
+  });
+
+  return {
+    dir: {
+      input: "src",
+      output: "dist",
+      includes: "_includes",
+      data: "_data",
+    },
+    templateFormats: ["md", "njk"],
+  };
+}
