@@ -8,10 +8,13 @@ permalink: false
 
 Dearest friends,
 
-The wagons are packed, the hounds restless, and all provisions accounted for. We depart before noon under fair skies and high spirits. The youngest recruit has already inquired three times whether we are “there yet,” though we have scarcely left the city limits. I believe this portends a lively campaign.
+I write to you with glad tidings. Our expedition has commenced. The journey required a detour to retrieve the youngest recruits from their summer encampment — they were collected without incident, though morale among them fluctuates wildly, as is the way of small soldiers.
 
-The road north is green and generous. Fields of corn stand at attention like so many raw recruits. We made one halt for coffee and hard tack, which improved morale considerably. The hounds, too, seem satisfied with the arrangement.
+Our loyal hound, Indie, rides among us. She is in good spirits, though I must report that near Wooster she demanded an urgent halt of the entire column to attend to matters of a personal nature. The deed was done at the roadside with great dignity, and we resumed our march.
 
-By nightfall we expect to make camp among the pines of Mohican. I shall dispatch further word once the tents are pitched and the fire kindled.
+The heavens, which so often conspire against men of the wilderness, showed us mercy. No rain fell upon our column. No wind delayed our advance. We have arrived at the campsite whole and unbroken.
 
-Yours in triumph, — Cpt. Tony
+Now begins the true campaign: the raising of tents.
+
+Yours in triumph and cautious optimism,
+— Cpt. Tony
