@@ -1,7 +1,7 @@
 ---
 campaign: mohican
 order: 3
-dateline: July the 25th, 2026 - Dawn
+dateline: July the 25th, 2026 — Dawn
 place: Camp at Mohican Reservation
 permalink: false
 ---
