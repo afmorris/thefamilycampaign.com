@@ -24,6 +24,9 @@ eleventyComputed:
       <div class="dispatch-page__letter">
         {{ content | safe }}
       </div>
+      <p class="dispatch-page__permalink">
+        <a href="{{ page.url }}" aria-label="Permanent link to this dispatch">Link to this dispatch</a>
+      </p>
       <div class="dispatch-page__seal" aria-hidden="true"><span aria-hidden="true">T</span></div>
     </div>
   </article>

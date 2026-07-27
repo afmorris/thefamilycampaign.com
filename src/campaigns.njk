@@ -36,6 +36,9 @@ eleventyComputed:
             <div class="dispatch-page__letter" data-js="letter">
               {{ dispatch.templateContent | safe }}
             </div>
+            <p class="dispatch-page__permalink">
+              <a href="{{ dispatch.data.permalink }}" aria-label="Permanent link to this dispatch">Link to this dispatch</a>
+            </p>
             <div class="dispatch-page__seal" aria-hidden="true"><span aria-hidden="true">T</span></div>
           </div>
         </article>
