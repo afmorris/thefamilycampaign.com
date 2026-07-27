@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="wax" cx="0.35" cy="0.30" r="0.85">
+      <stop offset="0" stop-color="#b04a37"/>
+      <stop offset="0.6" stop-color="#8e2f23"/>
+      <stop offset="1" stop-color="#5e1c14"/>
+    </radialGradient>
+  </defs>
+  <g transform="rotate(-10 32 32)">
+    <!-- irregular wax blob: main circle with lobes -->
+    <circle cx="32" cy="32" r="27" fill="url(#wax)"/>
+    <circle cx="12" cy="26" r="6.5" fill="#8e2f23"/>
+    <circle cx="52.5" cy="40" r="5.5" fill="#7a281d"/>
+    <circle cx="40" cy="7.5" r="5" fill="#8e2f23"/>
+    <circle cx="22" cy="56" r="5" fill="#7a281d"/>
+    <!-- pressed inner ring -->
+    <circle cx="32" cy="32" r="21" fill="none" stroke="#5e1c14" stroke-width="2" opacity="0.75"/>
+    <circle cx="32" cy="32" r="19" fill="none" stroke="#c8705c" stroke-width="1" opacity="0.5"/>
+    <!-- the letter T, serif-ish, drawn as paths for crispness -->
+    <g fill="#f3d9c2">
+      <!-- top bar with serifs -->
+      <path d="M20 22 h24 v5 l-3 2 h-7 v14 l2.5 3 h-9 l2.5 -3 v-14 h-7 l-3 -2 z"/>
+    </g>
+  </g>
+</svg>
