@@ -1,6 +1,14 @@
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/js");
+  eleventyConfig.addPassthroughCopy("favicon.svg");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("apple-touch-icon.png");
+  eleventyConfig.addPassthroughCopy("favicon-16.png");
+  eleventyConfig.addPassthroughCopy("favicon-32.png");
+  eleventyConfig.addPassthroughCopy("favicon-192.png");
+  eleventyConfig.addPassthroughCopy("favicon-512.png");
+  eleventyConfig.addPassthroughCopy("site.webmanifest");
 
   eleventyConfig.addCollection("campaigns", (collectionApi) => {
     return collectionApi.getFilteredByGlob("src/campaigns/*.md").sort((a, b) => a.data.number - b.data.number);
