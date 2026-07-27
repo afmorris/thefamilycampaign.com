@@ -8,7 +8,7 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addCollection("dispatches", (collectionApi) => {
     return collectionApi
-      .getFilteredByGlob("src/dispatches/*.md")
+      .getFilteredByGlob("src/dispatches/**/*.md")
       .sort((a, b) => {
         if (a.data.campaign === b.data.campaign) return a.data.order - b.data.order;
         return 0;
