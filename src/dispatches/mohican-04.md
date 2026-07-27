@@ -3,6 +3,7 @@ campaign: mohican
 order: 4
 dateline: July the 25th, 2026 — Afternoon
 place: Upon the Mohican River
+slug: july-25th-afternoon
 layout: dispatch.njk
 ---
 

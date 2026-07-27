@@ -3,6 +3,7 @@ campaign: mohican
 order: 2
 dateline: July the 24th, 2026 — Evening
 place: Camp at Mohican Reservation
+slug: july-24th-evening
 layout: dispatch.njk
 ---
 

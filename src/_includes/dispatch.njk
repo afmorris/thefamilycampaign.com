@@ -2,6 +2,7 @@
 eleventyComputed:
   title: "Dispatch {{ order }} — {{ campaign | title }}"
   description: "{{ dateline }} — {{ place }}"
+  permalink: "/dispatches/{{ campaign }}/{{ slug }}/"
 ---
 
 {% set campaignObj = collections.campaigns | findCampaign(campaign) %}

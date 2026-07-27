@@ -3,6 +3,7 @@ campaign: mohican
 order: 3
 dateline: July the 25th, 2026 — Dawn
 place: Camp at Mohican Reservation
+slug: july-25th-dawn
 layout: dispatch.njk
 ---
 
