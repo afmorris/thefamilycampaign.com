@@ -5,6 +5,9 @@ pagination:
   alias: campaign
 permalink: "campaigns/{{ campaign.data.slug }}/"
 layout: base.njk
+eleventyComputed:
+  title: "{{ campaign.data.title }}"
+  description: "{{ campaign.data.summary }}"
 ---
 
 {% set dispatches = collections.dispatches | dispatchesForCampaign(campaign.data.slug) %}
@@ -33,7 +36,7 @@ layout: base.njk
             <div class="dispatch-page__letter" data-js="letter">
               {{ dispatch.templateContent | safe }}
             </div>
-            <div class="dispatch-page__seal" aria-hidden="true"><span>T</span></div>
+            <div class="dispatch-page__seal" aria-hidden="true"><span aria-hidden="true">T</span></div>
           </div>
         </article>
       {% endfor %}
