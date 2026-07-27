@@ -517,27 +517,6 @@ a {
   margin-bottom: 0;
 }
 
-.dispatch-page__permalink {
-  margin: var(--space-lg) 0 0;
-  text-align: center;
-  font-size: 0.85rem;
-  font-family: var(--font-display-sc);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.dispatch-page__permalink a {
-  color: var(--soft-ink);
-  text-decoration: underline;
-  text-decoration-color: var(--brass);
-  text-underline-offset: 3px;
-}
-
-.dispatch-page__permalink a:hover,
-.dispatch-page__permalink a:focus-visible {
-  color: var(--ink);
-}
-
 .dispatch-page__seal {
   position: absolute;
   left: -18px;
