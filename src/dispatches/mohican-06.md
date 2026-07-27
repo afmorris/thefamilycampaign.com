@@ -3,7 +3,7 @@ campaign: mohican
 order: 6
 dateline: July the 26th, 2026
 place: Homeward Bound
-permalink: false
+layout: dispatch.njk
 ---
 
 Dearest friends,

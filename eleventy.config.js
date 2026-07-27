@@ -21,6 +21,15 @@ export default function (eleventyConfig) {
       .sort((a, b) => a.data.order - b.data.order);
   });
 
+  eleventyConfig.addFilter("findCampaign", (campaigns, campaignSlug) => {
+    return campaigns.find((c) => c.data.slug === campaignSlug);
+  });
+
+  eleventyConfig.addFilter("title", (str) => {
+    if (!str) return "";
+    return str.replace(/\b\w/g, (c) => c.toUpperCase());
+  });
+
   eleventyConfig.addFilter("roman", (n) => {
     const map = {
       M: 1000,

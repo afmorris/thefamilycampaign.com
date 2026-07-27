@@ -3,7 +3,7 @@ campaign: mohican
 order: 1
 dateline: July the 24th, 2026 — Morning
 place: En route to Mohican Reservation
-permalink: false
+layout: dispatch.njk
 ---
 
 Dearest friends,

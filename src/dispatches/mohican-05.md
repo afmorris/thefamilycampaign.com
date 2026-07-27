@@ -3,7 +3,7 @@ campaign: mohican
 order: 5
 dateline: July the 25th, 2026 — Nightfall
 place: By the fire, Mohican Reservation
-permalink: false
+layout: dispatch.njk
 ---
 
 Dearest friends,

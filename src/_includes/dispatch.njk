@@ -1,0 +1,33 @@
+---
+eleventyComputed:
+  title: "Dispatch {{ order }} — {{ campaign | title }}"
+  description: "{{ dateline }} — {{ place }}"
+---
+
+{% set campaignObj = collections.campaigns | findCampaign(campaign) %}
+
+<main class="dispatch-detail">
+  <nav class="reader__topbar" aria-label="Dispatch navigation">
+    <a class="reader__home" href="/">← The Shelf</a>
+    {% if campaignObj %}
+      <a class="reader__campaign" href="/campaigns/{{ campaignObj.data.slug }}/">{{ campaignObj.data.title }}</a>
+    {% else %}
+      <span class="reader__campaign">{{ campaign | title }}</span>
+    {% endif %}
+  </nav>
+
+  <article class="dispatch-detail__page">
+    <div class="dispatch-page__sheet">
+      <p class="dispatch-page__dateline">{{ dateline }}</p>
+      <p class="dispatch-page__place">{{ place }}</p>
+      <div class="dispatch-page__letter">
+        {{ content | safe }}
+      </div>
+      <div class="dispatch-page__seal" aria-hidden="true"><span aria-hidden="true">T</span></div>
+    </div>
+  </article>
+
+  <footer class="site-footer">
+    <p>Set down faithfully · That none of it be forgotten</p>
+  </footer>
+</main>
