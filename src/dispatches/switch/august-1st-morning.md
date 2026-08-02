@@ -1,9 +1,9 @@
 ---
 campaign: switch
 order: 1
-dateline: August the 2nd, 2026 — Morning
+dateline: August the 1st, 2026 — Morning
 place: The master bathroom, before the wall
-slug: august-2nd-morning
+slug: august-1st-morning
 layout: dispatch.njk
 ---
 

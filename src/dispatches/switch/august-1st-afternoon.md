@@ -1,9 +1,9 @@
 ---
 campaign: switch
 order: 2
-dateline: August the 2nd, 2026 — Afternoon
+dateline: August the 1st, 2026 — Afternoon
 place: Before the open wall, in conference with the wires
-slug: august-2nd-afternoon
+slug: august-1st-afternoon
 layout: dispatch.njk
 ---
 

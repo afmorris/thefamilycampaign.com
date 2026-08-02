@@ -1,9 +1,9 @@
 ---
 campaign: switch
 order: 3
-dateline: August the 2nd, 2026 — Evening
+dateline: August the 1st, 2026 — Evening
 place: The new garrison, lower box
-slug: august-2nd-evening
+slug: august-1st-evening
 layout: dispatch.njk
 ---
 

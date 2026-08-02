@@ -1,9 +1,9 @@
 ---
 campaign: switch
 order: 4
-dateline: August the 2nd, 2026 — Night
+dateline: August the 1st, 2026 — Night
 place: The doorway, at last in light
-slug: august-2nd-night
+slug: august-1st-night
 layout: dispatch.njk
 ---
 
