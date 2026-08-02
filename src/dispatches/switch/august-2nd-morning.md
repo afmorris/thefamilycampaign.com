@@ -9,7 +9,7 @@ layout: dispatch.njk
 
 Dearest friends,
 
-Today I open a new front, and it lies not in some distant wood but within my own bedchamber. The master bedroom switch — once a loyal servant of this household — has turned traitor. It will summon the light, but it will not dismiss it. Such insubordination cannot stand.
+Today I open a new front, and it lies not in some distant wood but within my own bedchamber. The master bathroom switch — once a loyal servant of this household — has turned traitor. It will summon the light, but it will not dismiss it. Such insubordination cannot stand.
 
 The plan of battle is ambitious: a wholly new box shall be established to house the fan switches, a fresh garrison on new ground, while the old position is to be dug out and replaced with deeper fortifications. This is no mere skirmish. This is engineering.
 
